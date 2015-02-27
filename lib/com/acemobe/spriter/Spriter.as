@@ -40,7 +40,7 @@ package com.acemobe.spriter
 		private	var	quadBatch:QuadBatch;
 		private	var	nextAnim:String = "";
 
-		public function Spriter(name:String, animName:String, data:* = null, entities:Array = null, animations:Array = null)
+		public function Spriter(name:String, animName:String, data:* = null, atlas:TextureAtlas = null, entities:Array = null, animations:Array = null)
 		{
 			super();
 			
