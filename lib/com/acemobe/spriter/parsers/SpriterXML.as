@@ -3,6 +3,8 @@ package com.acemobe.spriter.parsers
 	import com.acemobe.spriter.data.Entity;
 	import com.acemobe.spriter.data.Folder;
 	import com.acemobe.spriter.SpriterAnimation;
+	import starling.textures.TextureAtlas;
+
 
 	public class SpriterXML
 	{
@@ -11,7 +13,7 @@ package com.acemobe.spriter.parsers
 			
 		}
 			
-		public	static	function parse (spriteAnim:SpriterAnimation, data:XML, entities:Array = null, animations:Array = null):void
+		public	static	function parse (spriteAnim:SpriterAnimation, data:XML, defaultAtlas:TextureAtlas=null, entities:Array = null, animations:Array = null):void
 		{
 			for each(var folderXml:XML in data.folder)
 			{
