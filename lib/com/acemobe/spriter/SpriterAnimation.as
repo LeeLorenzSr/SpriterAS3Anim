@@ -2,6 +2,8 @@ package com.acemobe.spriter
 {
 	import com.acemobe.spriter.parsers.SpriterJSON;
 	import com.acemobe.spriter.parsers.SpriterXML;
+	import starling.textures.TextureAtlas;
+	
 	
 	public class SpriterAnimation
 	{
@@ -16,9 +18,9 @@ package com.acemobe.spriter
 			this.name = name;
 			
 			if (data is XML)
-				SpriterXML.parse (this, data, entities, animations);
+				SpriterXML.parse (this, data, atlas, entities, animations);
 			else 
-				SpriterJSON.parse (this, data, entities, animations);
+				SpriterJSON.parse (this, data, atlas, entities, animations);
 		}
 	}
 }
