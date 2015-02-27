@@ -11,7 +11,7 @@ package com.acemobe.spriter
 		public	var	entities:Array = []; // <entity> tags  
 		public	var	activeCharacterMap:Array = [];
 		
-		public function SpriterAnimation(name:String, data:*, entities:Array = null, animations:Array = null)
+		public function SpriterAnimation(name:String, data:*, atlas:TextureAtlas = null, entities:Array = null, animations:Array = null)
 		{
 			this.name = name;
 			
