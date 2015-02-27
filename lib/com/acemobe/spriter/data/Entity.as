@@ -15,8 +15,9 @@ package com.acemobe.spriter.data
 		public	var	entityData:*;
 		public	var	atlas:TextureAtlas;
 		
-		public function Entity()
+		public function Entity(textureAtlas:TextureAtlas = null)
 		{
+			this.atlas = textureAtlas;
 		}
 		
 		public	function parseXML (spriteAnim:SpriterAnimation, anims:Array = null):void
