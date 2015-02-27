@@ -39,12 +39,15 @@ package com.acemobe.spriter
 
 		private	var	quadBatch:QuadBatch;
 		private	var	nextAnim:String = "";
+		
+		private var	defaultAtlas:TextureAtlas = null;
 
 		public function Spriter(name:String, animName:String, data:* = null, atlas:TextureAtlas = null, entities:Array = null, animations:Array = null)
 		{
 			super();
 			
 			this.name = name;
+			this.defaultAtlas = atlas;
 			
 			imagesByName = {};
 			colorByName = {};
@@ -53,7 +56,7 @@ package com.acemobe.spriter
 			
 			if (!animation)
 			{
-				animation = SpriterCache.addAnimation (animName, new SpriterAnimation (animName, data, entities, animations));
+				animation = SpriterCache.addAnimation (animName, new SpriterAnimation (animName, data, atlas, entities, animations));
 			}
 			
 			quadBatch = new QuadBatch ();
