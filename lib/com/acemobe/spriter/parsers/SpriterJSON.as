@@ -24,7 +24,7 @@ package com.acemobe.spriter.parsers
 			
 			for each(var entityData:* in data.entity)
 			{
-				var	entity:Entity = new Entity ();
+				var	entity:Entity = new Entity (defaultAtlas);
 				entity.name = entityData.name;
 				entity.entityData = entityData;
 				
