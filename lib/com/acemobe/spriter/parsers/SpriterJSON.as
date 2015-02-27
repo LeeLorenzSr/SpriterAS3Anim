@@ -3,6 +3,8 @@ package com.acemobe.spriter.parsers
 	import com.acemobe.spriter.SpriterAnimation;
 	import com.acemobe.spriter.data.Entity;
 	import com.acemobe.spriter.data.Folder;
+	import starling.textures.TextureAtlas;
+
 
 	public class SpriterJSON
 	{
@@ -10,7 +12,7 @@ package com.acemobe.spriter.parsers
 		{
 		}
 
-		public	static	function parse (spriteAnim:SpriterAnimation, data:*, entities:Array = null, animations:Array = null):void
+		public	static	function parse (spriteAnim:SpriterAnimation, data:*, defaultAtlas:TextureAtlas=null, entities:Array = null, animations:Array = null):void
 		{
 			for each(var folderData:* in data.folder)
 			{
